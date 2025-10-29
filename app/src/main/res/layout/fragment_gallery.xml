@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E0638D"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.GalleryFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Media Player(Songs)"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        tools:ignore="HardcodedText" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ciecleImage"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pic3"
+        tools:ignore="ImageContrastCheck" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/pausebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_pause"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="0dp"/>
+
+        <ImageButton
+            android:id="@+id/playbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_play"
+            tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="0dp"/>
+
+
+        <ImageButton
+            android:id="@+id/resetbtn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/alert_light_frame"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E0638D"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E0638D"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="RedundantNamespace,ScrollViewSize,UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/backBtn"
+                        android:background="#E0638D"
+                        android:src="@drawable/baseline_keyboard_backspace_24"
+                        tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/storetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="12dp"
+                    android:text="MY STORE"
+                    android:textColor="#E7C013"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck">
+
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/apnishape"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/baseline_search_24"
+                    android:hint="Search Products"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,TextContrastCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="25dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/pic1"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+                <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:layout_gravity="center"
+                    app:dotsSize="8dp"
+                    app:dotsSpacing="6dp"/>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/productCatgories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="serif-monospace"
+                    android:text="Product Catgories :"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/viewbtn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:backgroundTint="@color/white"
+                    android:text="ViewAll"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="7dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women"
+                android:layout_margin="3dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <LinearLayout
+                android:id="@+id/meLinear"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="3dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleshape"
+                android:orientation="horizontal"
+                tools:ignore="RtlSymmetry">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="110dp"
+                    android:layout_height="90dp"
+                    android:elevation="5dp"
+                    android:src="@drawable/pic2"
+                    android:layout_margin="5dp"/>
+
+
+                <ImageView
+                    android:id="@+id/meImage"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/pic3"
+                    android:contentDescription="Sample Image"
+                    tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/imageViewsshp"
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/pic4"
+                    tools:ignore="ContentDescription,ImageContrastCheck,VisualLintBounds" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men"
+                android:layout_margin="3dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="3dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleshape"
+                android:orientation="horizontal"
+                tools:ignore="RtlSymmetry">
+
+
+               <ImageView
+                    android:id="@+id/shoes"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                   android:layout_marginLeft="6dp"
+                    android:background="@color/white"
+                    android:src="@drawable/pic5"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/boys"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/pic6"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/imegboy"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/pic7"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YE Boy"
+                android:layout_margin="3dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="3dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleshape"
+                android:orientation="horizontal"
+                tools:ignore="RtlSymmetry">
+
+
+                <ImageView
+                    android:id="@+id/shoes2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@color/white"
+                    android:src="@drawable/pic7b"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/boys2"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/pic8"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/imegboy2"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic9"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

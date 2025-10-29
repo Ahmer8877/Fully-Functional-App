@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.e.ahmer.navigationviews.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.e.ahmer.navigationviews.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.e.ahmer.navigationviews.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_help_center"
+        android:name="com.e.ahmer.navigationviews.HelpFrag"
+        android:label="Help Center"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/nav_highlights"
+        android:name="com.e.ahmer.navigationviews.highlightsFrag"
+        android:label="Highlights"
+        tools:layout="@layout/fragment_highlights" />
+    <fragment
+        android:id="@+id/fullscreenImageFragment"
+        android:name="com.e.ahmer.navigationviews.FullscreenImageFragment"
+        android:label="Fullscreen Image"
+        tools:layout="@layout/fragment_fullscreen_image" />
+    <fragment
+        android:id="@+id/shoePic"
+        android:name="com.e.ahmer.navigationviews.shoePic"
+        android:label="Fullscreen Image"
+        tools:layout="@layout/fragment_shoe_pic" />
+
+
+
+
+
+
+</navigation>

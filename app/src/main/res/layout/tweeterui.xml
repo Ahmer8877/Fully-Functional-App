@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="5dp"
+    android:clickable="true"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/TweeterImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/cornershape"
+            android:contentDescription="@string/nav_header_desc"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:src="@drawable/pic3"
+            tools:ignore="ImageContrastCheck" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="120dp"
+                android:id="@+id/Tweeternametext"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Ahmer Rajpoot"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/tweeterContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="7dp"
+            android:padding="2dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,TextSizeCheck" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

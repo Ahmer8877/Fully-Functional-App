@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_person_outline_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/baseline_list_24"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/nav_highlights"
+            android:title="Highlights"
+            android:icon="@drawable/baseline_content_copy_24"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_help_center"
+            android:title="Help Center"
+            tools:ignore="HardcodedText" />
+
+
+
+
+    </group>
+
+</menu>

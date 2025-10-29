@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="#4E4848"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashScreen">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        app:srcCompat="@drawable/baseline_shop_24"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="From RANA"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView0"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/apnishape"
+        app:srcCompat="@drawable/baseline_shop_24"
+        tools:ignore="ImageContrastCheck" />
+</LinearLayout>

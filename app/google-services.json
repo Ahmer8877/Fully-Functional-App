@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "21962789894",
+    "firebase_url": "https://sign-up-batabase-default-rtdb.firebaseio.com",
+    "project_id": "sign-up-batabase",
+    "storage_bucket": "sign-up-batabase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21962789894:android:cc201b14d5fcfc96a1df87",
+        "android_client_info": {
+          "package_name": "com.e.ahmer.navigationviews"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrm4GWrMeb5wosBU0Qw-ncfzXBklZURqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21962789894:android:3912637432335d08a1df87",
+        "android_client_info": {
+          "package_name": "com.e.ahmer.sign_upui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrm4GWrMeb5wosBU0Qw-ncfzXBklZURqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
