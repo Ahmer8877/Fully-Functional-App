@@ -1,9 +1,15 @@
 package com.e.ahmer.navigationviews
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +22,7 @@ class loginScreen : AppCompatActivity() {
     lateinit var database : DatabaseReference
     lateinit var dialoge : Dialog
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
@@ -34,7 +41,7 @@ class loginScreen : AppCompatActivity() {
 
         // after login button code
         val loginBtn=findViewById<Button>(R.id.btnLogin)
-        val mailText=findViewById<TextInputEditText>(R.id.TextEmails)
+        val mailText=findViewById<EditText>(R.id.TextUserNames)
 
         //set  the separete dialog code
         dialoge= Dialog(this)
@@ -60,8 +67,19 @@ class loginScreen : AppCompatActivity() {
                 Toast.makeText(this,"Please Fill the Activities", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            //progress bar code(visible)
+            val progressBar=findViewById<ProgressBar>(R.id.progressBar)
+            progressBar.visibility= View.VISIBLE
+            // Simulate a network delay (like Firebase login)
 
-           //check user input is valid or not
+            Handler(Looper.getMainLooper()).postDelayed({
+                progressBar.visibility = View.GONE
+                loginBtn.isEnabled = true
+
+
+                }, 3000)
+
+            //check user input is valid or not
             if (userName.isNotEmpty()){
                 readdata(userName)
             }else{
@@ -86,6 +104,7 @@ class loginScreen : AppCompatActivity() {
 
                 val storeIntent= Intent(this, MainActivity::class.java)
                 startActivity(storeIntent)
+                finish()
                 //show dialog code
                 dialoge.show()
 

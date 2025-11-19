@@ -20,6 +20,17 @@
         android:textSize="30sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck"/>
+
+    <!-- Hidden ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
     <TextView
         android:text="Login : "
         android:textSize="28sp"
@@ -34,24 +45,19 @@
         android:layout_height="wrap_content"
         tools:ignore="HardcodedText" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TextEmails"
-            android:inputType="text"
-            android:drawableStart="@android:drawable/ic_menu_edit"
-            android:layout_marginTop="12dp"
-            android:hint="UserName"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:padding="10dp"
-            android:background="@android:drawable/edit_text"
-            tools:ignore="HardcodedText" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="wrap_content"
+        android:id="@+id/TextUserNames"
+        android:inputType="text"
+        android:drawableStart="@android:drawable/ic_menu_edit"
+        android:layout_marginTop="12dp"
+        android:hint=" Enter User Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text"
+        tools:ignore="HardcodedText" />
 
 
     <Button

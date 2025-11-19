@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NavigationViews">
         <activity
+            android:name=".UpdateData"
+            android:exported="false" />
+        <activity
+            android:name=".SearchData"
+            android:exported="false" />
+        <activity
             android:name=".RegisterScreen"
             android:exported="false" />
         <activity

@@ -23,8 +23,11 @@ import androidx.viewpager2.widget.ViewPager2
 import com.e.ahmer.navigationviews.APIData
 import com.e.ahmer.navigationviews.MyPagerAdapter
 import com.e.ahmer.navigationviews.R
+import com.e.ahmer.navigationviews.SearchData
+import com.e.ahmer.navigationviews.UpdateData
 import com.e.ahmer.navigationviews.databinding.FragmentHomeBinding
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+import kotlin.jvm.java
 
 class HomeFragment : Fragment() {
 
@@ -40,6 +43,8 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+
+
 
         //view pager images list
         viewpager=rootView.findViewById(R.id.viewPager)
@@ -81,6 +86,21 @@ class HomeFragment : Fragment() {
 
 
         }
+
+        //search btn code
+        val searchBtn=rootView.findViewById<Button>(R.id.SearchBtn)
+        searchBtn.setOnClickListener{
+            val intents= Intent(requireContext(),SearchData::class.java)
+            startActivity(intents)
+        }
+        //update btn code
+        val updateBtn=rootView.findViewById<Button>(R.id.UpdateBtn)
+        updateBtn.setOnClickListener{
+            val intents= Intent(requireContext(), UpdateData::class.java)
+            startActivity(intents)
+
+        }
+
         //me pic click and view the large screen code
         val shoe=rootView.findViewById<ImageView>(R.id.shoes)
 

@@ -42,14 +42,25 @@
 
 
                 </LinearLayout>
+                <Button
+                    android:id="@+id/UpdateBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/circleshape"
+                    android:text="U"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="7dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
 
 
                 <TextView
                     android:id="@+id/storetext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="75dp"
                     android:layout_marginTop="12dp"
+                    android:layout_margin="5dp"
                     android:text="MY STORE"
                     android:textColor="#E7C013"
                     android:textSize="30sp"
@@ -58,6 +69,19 @@
 
 
                 </TextView>
+
+
+                <Button
+                    android:id="@+id/SearchBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/circleshape"
+                    android:text="S"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="7dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
 
 
             </LinearLayout>

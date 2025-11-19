@@ -26,6 +26,10 @@
             android:id="@+id/nav_help_center"
             android:title="Help Center"
             tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_delete_data"
+            android:title="Delete Database Data"
+            tools:ignore="HardcodedText" />
 
 
 

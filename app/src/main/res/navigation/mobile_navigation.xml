@@ -30,6 +30,11 @@
         android:label="Help Center"
         tools:layout="@layout/fragment_help" />
     <fragment
+        android:id="@+id/nav_delete_data"
+        android:name="com.e.ahmer.navigationviews.DeleteData"
+        android:label="Delete Data"
+        tools:layout="@layout/fragment_delete_data" />
+    <fragment
         android:id="@+id/nav_highlights"
         android:name="com.e.ahmer.navigationviews.highlightsFrag"
         android:label="Highlights"

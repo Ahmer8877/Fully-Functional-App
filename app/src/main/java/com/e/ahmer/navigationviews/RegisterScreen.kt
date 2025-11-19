@@ -2,7 +2,11 @@ package com.e.ahmer.navigationviews
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +29,7 @@ class RegisterScreen : AppCompatActivity() {
         Registertext.setOnClickListener {
             val intent= Intent(this, loginScreen::class.java)
             startActivity(intent)
+            finish()
         }
         //register button onclick and firebase data
         val registerBtn=findViewById<Button>(R.id.btnRegister)
@@ -61,6 +66,17 @@ class RegisterScreen : AppCompatActivity() {
                 Toast.makeText(this,"Please Fill the Activities", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            //progress bar code(visible)
+            val progressBar=findViewById<ProgressBar>(R.id.progressBar)
+            progressBar.visibility= View.VISIBLE
+            // Simulate a network delay (like Firebase login)
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                progressBar.visibility = View.GONE
+                registerBtn.isEnabled = true
+
+
+            }, 3000)
 
             database= FirebaseDatabase.getInstance().getReference("StoreData")
             val User= Firebasedata(userName,email,password)
@@ -71,6 +87,7 @@ class RegisterScreen : AppCompatActivity() {
                 Toast.makeText(this,"You Registerd,Go to Login Page", Toast.LENGTH_SHORT).show()
                 val intent= Intent(this, loginScreen::class.java)
                 startActivity(intent)
+                finish()
             }.addOnFailureListener {
                 Toast.makeText(this,"You Failed to Register", Toast.LENGTH_SHORT).show()
             }
